@@ -1,0 +1,50 @@
+
+INSERT INTO ROL (rol_id, rol_nombre) VALUES (1, 'Administrador');
+INSERT INTO ROL (rol_id, rol_nombre) VALUES (2, 'Usuario');
+
+INSERT INTO USUARIO (us_id, us_nombres, us_apellidos, us_direccion, us_rol) VALUES (1, 'Juan', 'Pérez', 'Calle Falsa 123', 1);
+INSERT INTO USUARIO (us_id, us_nombres, us_apellidos, us_direccion, us_rol) VALUES (2, 'Ana', 'Gómez', 'Avenida Siempre Viva 456', 2);
+
+
+INSERT INTO VEHICULO (veh_id, veh_us_id, veh_modelo, veh_placa, veh_anio) VALUES (1, 2, 'Toyota Corolla', 'ABC123', 2020);
+INSERT INTO VEHICULO (veh_id, veh_us_id, veh_modelo, veh_placa, veh_anio) VALUES (2, 2, 'Honda Civic', 'XYZ789', 2019);
+
+INSERT INTO SOLICITUD_MANTENIMIENTO (sol_id, sol_us_id, sol_veh_id, sol_fecha) VALUES (1, 2, 1, TO_DATE('2023-01-15', 'YYYY-MM-DD'));
+INSERT INTO SOLICITUD_MANTENIMIENTO (sol_id, sol_us_id, sol_veh_id, sol_fecha) VALUES (2, 2, 2, TO_DATE('2023-02-20', 'YYYY-MM-DD'));
+
+
+INSERT INTO Rol
+VALUES (1, 'Administrador');
+INSERT INTO Rol
+VALUES (2, 'Usuario');
+
+INSERT INTO Usuario
+VALUES (1, 'Juan', 'Perez', 'Calle 123', 1);
+INSERT INTO Usuario
+VALUES (2, 'Maria', 'Gonzalez', 'Avenida 456', 2);
+
+INSERT INTO Vehiculo
+VALUES (1, 1, 'Toyota', 'ABC123', 2015);
+INSERT INTO Vehiculo
+VALUES (2, 2, 'Honda', 'XYZ789', 2018);
+
+INSERT INTO Solicitud_Mantenimiento
+VALUES (1, 1, 1, TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+INSERT INTO Solicitud_Mantenimiento
+VALUES (2, 2, 2, TO_DATE('2024-06-11', 'YYYY-MM-DD'));
+
+
+
+
+
+-- Insertar en Rol
+INSERT INTO Rol (rol_id, rol_nombre) VALUES (1, 'Administrador');
+
+-- Insertar en Usuario
+INSERT INTO Usuario (us_id, us_nombres, us_apellidos, us_direccion, us_rol) VALUES (1, 'Juan', 'Pérez', 'Calle 123', 1);
+
+-- Insertar en Vehiculo
+INSERT INTO Vehiculo (veh_id, veh_us_id, veh_modelo, veh_placa, veh_anio) VALUES (1, 1, 'Toyota Corolla', 'ABC-123', TO_DATE('2023-06-10', 'YYYY-MM-DD'));
+
+-- Insertar en Solicitud_Mantenimiento
+INSERT INTO Solicitud_Mantenimiento (sol_id, sol_us_id, sol_veh_id, sol_fecha) VALUES (1, 1, 1, TO_DATE('2023-06-10', 'YYYY-MM-DD'));
