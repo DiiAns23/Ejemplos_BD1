@@ -140,19 +140,19 @@ INSERT INTO
 -- LEFT JOIN && GROUP BY && COUNT
 
 SELECT 
-    p.nombre as,
+    p.nombre,
     COUNT(c.id) AS 'Numero de clientes'
 FROM
     PAIS p
     LEFT JOIN CLIENTE c ON p.id = c.pais
 GROUP BY
-    'Pais'
+    p.nombre
 ;
 
 -- RIGHT JOIN
 SELECT
     c.nombre,
-    p.nombre,
+    p.nombre
 FROM
     CLIENTE c
     RIGHT JOIN PAIS p ON c.pais = p.id
